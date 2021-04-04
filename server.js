@@ -1,16 +1,13 @@
+const express=require("express");
+const dotenv=require("dotenv");
 
-const http=require('http');
+//load env
+dotenv.config({ path:'./config/config.env' });
 
-const server=http.createServer((req,res)=>{
-    //console.log(req);
-    const {headers,url,method}=req;
-    //console.log(headers,url,method);
-    res.setHeader('Content-Type','text/html');
-    res.write('FUCK the whole Universe!');
-    res.end();
-    console.log(req.headers.authorization);
-   
-});
+const app=express();
+const PORT=process.env.PORT||5000;
 
-const PORT=5000;
-server.listen(PORT,()=>console.log(`Server running on port ${PORT}`));
+app.listen(
+    PORT,
+    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+);
