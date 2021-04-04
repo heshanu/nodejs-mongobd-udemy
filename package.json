@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "f",
+  "description": "f",
+  "version": "1.0.0",
+  "main": "f",
+  "repository": {
+    "type": "git",
+    "url": "f"
+  },
+  "keywords": [
+    "f"
+  ],
+  "author": "f",
+  "license": "ISC"
+}
