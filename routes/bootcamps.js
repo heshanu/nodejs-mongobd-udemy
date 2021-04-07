@@ -1,12 +1,4 @@
-const express=require("express");
-const dotenv=require("dotenv");
-
-//load env
-//dotenv.config({ path:'./config/config.env' });
-
-const app=express();
-
-//const express=require('express');
+const express=require('express');
 const router=express.Router();
 
 app.get('/api/v1/bootcamps',(req,res)=>{
@@ -30,14 +22,3 @@ app.delete('/api/v1/bootcamps/:id',(req,res)=>{
     res.status(200).json({success:true,msg:`delete bootcamp ${request.params.id}`});
 })
 
-
-
-
-
-const PORT=process.env.PORT||5000;
-
-
-
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}!`);
-});
